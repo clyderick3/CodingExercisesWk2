@@ -3,22 +3,49 @@ public class Solution {
   // use this method as a prototype for your answers...
   void soln1() {
   // For loop from 100 to 5 by 5. print index var.
+    for (int i = 100; i >= 5; i = i -5);
+    System.out.println(i);
   }
   
   void soln2() {
   // For loop from 100 to 5 by 5. do nothing inside the loop.
+    for (int i = 100; i >= 5; i = i -5);
   }
   
   void soln3() {
   // Sum Integers from 9 to 17, print sum
+    int sum = 0;
+    for (int i = 9; i <= 17; i++){
+      sum = sum + i;
+    }
+    system.out.println(sum);
+
   }
   
   void soln4() {
   // Find and print the smallest integer in an array a = [9, 5, 6, 3, 8, 2, 4];
+    int small = a[0];
+    for(int i = 1; i >= a.length -1; i++){
+
+      if a[i] < small) {
+        small = a[i];
+      }
+    }
+    return small;
+
   }
   
   void soln5() {
   // Find largest integer in the last array and print it.
+    int large = a[0];
+    for(int i = 1; i <=a.length -1; i++){
+
+      if (a[i] > large) {
+        large = a[i];
+      }
+    }
+    return large;
+
   }
   
   void soln6() {
