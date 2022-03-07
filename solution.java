@@ -50,12 +50,13 @@ public class Solution {
   
   void soln6() {
   // Find and print index of first true element in an array of booleans a = [false, false, false, true, false];
-    for ( int i = 0; i <= a.length - 1; i++)
+    for ( int i = 0; i < a.length - 1; i++){
 
-    if (a[i]){
+    if (a[i] == true){
+      break;
+    }
+    System.out.println(i);
 
-      system.out.println(“index of “ + i + “is first true”)}
-    break;
 
     // or if (a[i] == true) { break;}
 
@@ -68,6 +69,7 @@ public class Solution {
    int i = 0;
    while (i <= a.length);
    System.out.println(a(i));
+   //or while (!a[i]) { i++; } System.out.print(i); }
   }
   
   void soln8() {
@@ -129,15 +131,25 @@ public class Solution {
 double(Math.pow(a,b));
   }
   
-  void soln15() {
+  void soln15 (Object fish) {
   // create a method that returns a boolean if the Object passed to it is a Fish or not
-    return input instaceOf Fish;
+     if (fish == Fish) {
+       return true; //return input instaceOf Fish;
   }
+     return false;
   
-  void soln16() {
+  void soln16(Object x) {
   // There is an object x which has a method (double)Balance(). Build an IF statement that prints
     // "Paid Off" if the result of the balance call is less than of equal to 1.0, else it prints
     // the balance as a Dollar figure (2 decimal places)
+    double balance = x.Balance();
+    if (balance <= 1.0) {
+      System.out.println("Paid Off");
+    }
+    else{
+      String bal = String.format("%.2f",balance);
+      System.out.println(bal);
+    }
   }
   
   void soln17() {
@@ -162,25 +174,43 @@ double(Math.pow(a,b));
     }
   }
   
-  void soln19() {
+  void soln19( Object [] objects )  {
   // Given an array of objects (of class Xaction) w/nulls, sum all
     // the values of the objects in the array, using Xaction::getValue(). Print the sum.
     Integer sum = 0;
     for (int i = 0; i < objects.length; i++) {
-      Integer value = 
+      Integer value = Xaction.getValue(objects[i]);
+      if (value != null) { //then print the sum as it updates
+        sum += value;
     }
   }
   
   void soln20() {
   // reverse an array of objects of type Xaction
+    Xaction reverse = "";
+    for (int in = 0; i <= objects.length / 2; i++) {
+      reverse = objects[i];
+      objects[i] = objects[objects.length - 1 - i];
+     reverse = objects[objects.length - 1 - i];
+    }
+    return objects;
   }
   
   void soln21() {
   // Print a 5's times table
+    String table = "";
+    for (int i = 1; i <= 5; i++){
+      for (int j = 1; j<= 5; j++){
+        table += String.format("%3d |", (i*j));
+      }
+      table _+= "\n";
+    }
+    System.out.println(table);
   }
   
   void soln22() {
   // determine the hypotenuse of a 9 by 7 right triangle, assign it to a double
+    double hypotenuse = Math.sqrt(Math.pow(9,2) + Math.pow(7,2)));
   }
   
 }
